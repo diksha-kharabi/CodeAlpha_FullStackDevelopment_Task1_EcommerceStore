@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-Commerce Store</title>
+</head>
+<body>
+<a href="/cart/">View Cart</a>
+<h1>My Products</h1>
+
+{% for product in products %}
+<div>
+   <h3>
+    <a href="/product/{{ product.id }}/">
+        {{ product.name }}
+    </a>
+</h3>
+    <p>Price: ₹{{ product.price }}</p>
+    <p>{{ product.description }}</p>
+    <hr>
+</div>
+{% endfor %}
+<a href="/register/">Register</a> |
+<a href="/login/">Login</a> |
+<a href="/logout/">Logout</a> |
+<a href="/cart/">View Cart</a>
+</body>
+</html>
+
